@@ -5,7 +5,7 @@ pipeline {
     label "windows_slave"
   }
   tools {
-  JDK "JAVA_HOME"
+  JDK "jdk1.8"
   maven "MAVEN_HOME"
   }
   stages {
