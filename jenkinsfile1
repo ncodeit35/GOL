@@ -9,11 +9,9 @@ pipeline {
   maven "MAVEN_HOME"
   }
   stages {
-    // start of stage : build
-    stage('build') {
-      // start of running steps inside one stage
+    stage('build')
+    {
       steps {
-        // invoke command to build with maven
         bat 'mvn clean install'
       }
     }
