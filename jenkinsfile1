@@ -17,7 +17,7 @@ pipeline {
     // start of deploy state
 stage('deploy') {
    step {
-   bat 'xcopy /y C:\\jenkins_slave\\workspace\\GOL_pipeline\\gameoflife-web\\target\\gameoflife.war "C:\\Program Files\\Apache Software Foundation\\Tomcat 7.0\webapps"
+   bat 'xcopy /y C:\\jenkins_slave\\workspace\\GOL_pipeline\\gameoflife-web\\target\\gameoflife.war "C:\\Program Files\\Apache Software Foundation\\Tomcat 7.0\\webapps"
    }
   }
   
