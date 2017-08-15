@@ -8,7 +8,6 @@ pipeline {
   jdk "jdk1.8"
   maven "MAVEN_HOME"
   }
-  // start of stages : build, test, deploy ...
   stages {
     // start of stage : build
     stage('build') {
