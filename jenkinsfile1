@@ -15,5 +15,18 @@ pipeline {
         bat 'mvn clean install'
       }
     }
+    // start of deploy state
+stage('deploy') {
+   // define step to run
+   step {
+   // invoke commond to stop tomcat service
+   bat 'sc stop Tomcat7'
+   bat 'ping 192.168.11.31 -n 6'
+   // copy war file from build target to webapp Tomcat folder
+   bat 'xcopy /y C:\jenkins_slave\workspace\GOL_pipeline\gameoflife-web\target/gameoflife.war "C:\Program Files\Apache Software Foundation\Tomcat 7.0\webapps
+   // invoke commond to start tomcat service"'
+   bat 'sc start Tomcat7'
+   }
   }
+ }
 }
